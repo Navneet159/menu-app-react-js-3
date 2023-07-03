@@ -32,7 +32,64 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
+}
+
+.container {
+  background: orange;
+  height: auto;
+  padding: 100px;
+  width: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+
+.login-row {
+  background: white;
+  height: 600px;
+  width: 600px;
+  border-radius: 10px;
+}
+
+.sign-in-text {
+  font-size: 10px;
+}
+
+.div-input {
+  width: 100%;
+}
+
+input {
+  width: 100%;
+}
+
+.recover-text {
+  font-size: 10px;
+  text-align: end;
+}
+
+.sign-button {
+  background: orange !important;
+  border: 1px solid white !important;
+  width: 250px;
+}
+
+.sign-button-google {
+  background: #fafafa !important;
+  border: 1px solid white !important;
+  width: 250px;
+  color: black !important;
+}
+
+.not-reg-text {
+  font-size: 12px;
+}
+
+.not-reg-text-inside {
+  color: orange;
 }
