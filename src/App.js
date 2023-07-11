@@ -7,6 +7,8 @@ import Layout from './Components/Layout';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import SignUp from './Pages/SignUp';
 import ForgetPassword from './Pages/ForgetPassword';
+import 'toastr/build/toastr.css';
+
 
 function App() {
   return (

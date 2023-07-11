@@ -3,6 +3,10 @@ import { Button, Col, Container, Row, } from 'react-bootstrap';
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 // import { faG } from '@fortawesome/free-solid-svg-icons'
 
+
+
+
+
 export default function SignUp() {
     return (
 
@@ -10,7 +14,7 @@ export default function SignUp() {
             <Row className='login-row'>
                 <Col>
                     <div className='logo'>
-                        <img className='img-fluid mt-3 rounded-2' src="/images/logo-2.png" height={100} width={100} alt="logo svg" />
+                        <img className='img-fluid mt-3 rounded-2' src="/images/Group-9.png" height={100} width={100} alt="logo svg" />
                     </div>
                     <h3 className='mt-3'>Welcome!</h3>
                     <div className='sign-in-text'>Please Sign Into Your Account</div>

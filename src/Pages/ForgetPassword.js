@@ -10,7 +10,7 @@ export default function ForgetPassword() {
             <Row className='login-row'>
                 <Col>
                     <div className='logo'>
-                        <img className='img-fluid mt-3 rounded-2' src="/images/logo-2.png" height={100} width={100} alt="logo svg" />
+                        <img className='img-fluid mt-3 rounded-2' src="/images/Group-9.png" height={100} width={100} alt="logo svg" />
                     </div>
                     <h3 className='mt-3'>Welcome!</h3>
                     <div className='sign-in-text'>Please Sign Into Your Account</div>
