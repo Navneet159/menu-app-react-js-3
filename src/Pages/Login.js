@@ -12,31 +12,69 @@ export default function Login() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
 
+
+
+
     const formSubmit = () => {
 
-        // let formValues = [];
-        // formValues.push({ "email": email, "password": password });
-        // setFrom([...formValues, formValues]);
-        // console.log(form);
-        if (!validator.isEmail(email)) {
-            toastr.error("Email is Invalid")
+        var servicesObj = new services(); // creating object of class services
+
+        // Email Validation  ---------------------
+
+        if (validator.isEmpty(email)) {
+            toastr.warning("Email cannot be Empty")
+            return false
+        }
+        else if (!validator.isEmail(email)) {
+            toastr.error("Enter Valid Email Address")
+            // return false
+            console.log("not valid email")
+        }
+
+        // Password Validation  ---------------------
+
+        if (validator.isEmpty(password)) {
+            toastr.warning("Password cannot be Empty")
+            return false
+        }
+        else if (!validator.isStrongPassword(
+            email,
+            { minLength: 6, minLowercase: 0, minUppercase: 0, minNumbers: 0, minSymbols: 0 } //too Strong check OR some error
+        )) {
+            toastr.error("Enter a Strong Password")
             return false
         }
 
+        // Sending data --------------------------
 
+        var response = servicesObj.PostMethod( //services class methos
+            "login", { "email": email, "password": password } // url and data arguments passed in class function
 
-        var servicesObj = new services; //?? gogole
-        // if(email){
+        ).then(
+            (res) => {
+                // console.log(res); // getting response data in console
+                // console.log(res.data[0].name); // getting name of the person loggig in 
+                toastr.success("Login Successful, Welcome " + res.data[0].name)
+            }
+        ).catch(
+            (error) => {
+                console.log(error.message);
+                toastr.error(error.message);
 
-        // }
-        var response = servicesObj.PostMethod("register.php", { "email": email, "password": password }).then((res) => {  //?? gogole
-            console.log(res);
-        });
+            } // catching error
+        )
 
         console.log(response);
 
 
+
     }
+
+
+
+
+
+
 
     const storeValue = (evnt, field) => {  //?? gogole (only way?)
         switch (field) {
@@ -54,7 +92,7 @@ export default function Login() {
 
     return (
 
-        <Container className='container'>
+        <Container className='container my-5'>
             <Row className='login-row'>
                 <Col>
                     <div className='logo'>

@@ -11,4 +11,13 @@ export default class services extends enviroment {
         });
     }
 
+    // async PostMethodAuth(url, data) {
+    //     return await axios.post(this.baseUrl + url, data, {
+    //         headers: {
+    //             'Content-type': 'application/x-www-form-urlencoded',
+    //             'Authorization': 'Basic xxxxxxxxxxxxxxxxxxx'
+    //         }
+    //     });
+    // }
+
 }
